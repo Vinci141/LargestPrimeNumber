@@ -1,15 +1,16 @@
-# Goal is to find largest prime number of a given number
+# Goal is to find largest prime number
 
-def func1(num):
-    i = 2
-    pn = 1
-    while num / i < num:
-        if num % i == 0:
-            pn = i
-            num = num / i
-            return pn
+def FindLargestPrimeNumber (input):
+    min_value = 2
+    prime_num = 1
+    while input / min_value < input:
+        if input % min_value == 0:
+            prime_num = min_value
+            input = input / min_value
+            return prime_num
         else:
-            i += 1
+            min_value += 1
 
-data = func1(19)
+
+data = FindLargestPrimeNumber(21)
 print(data)
